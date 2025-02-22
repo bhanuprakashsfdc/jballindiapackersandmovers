@@ -33,9 +33,58 @@
   <link href="css/font-awesome.min.css" rel="stylesheet" />
   <style>
     .col-lg-4 {
-
       width:25%;
     }
+    .mini-header {
+      background-color: #0C1529;
+      color: white;
+      padding: 10px 20px;
+      text-align: center;
+      position: fixed;
+      top: 0;
+      left: 0;
+      right: 0;
+      z-index: 9999;
+  }
+
+  .mini-header a {
+      color: #00d2d2;
+      text-decoration: none;
+      margin: 0 10px;
+  }
+
+  .mini-header .contact-info {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      flex-wrap: wrap;
+      gap: 20px;
+  }
+
+  .mini-header .contact-info i {
+      font-size: 1.5em;
+  }
+  .checktop{
+    top:40px;
+  }
+
+  @media (max-width: 992px) {
+      .mini-header .contact-info {
+          flex-direction: column;
+          gap: 10px;
+      }
+
+      .mini-header .contact-info i {
+          font-size: 1.2em;
+      }
+      .checktop{
+        display: flex;
+        top:120px;
+      }
+      .hero-img{
+        display: none;
+      }
+  }
   </style>
   </head>
 <body>
@@ -44,7 +93,16 @@
   <!--    Main Content-->
   <!-- ===============================================-->
   <main class="main" id="top">
-    <nav class="navbar navbar-expand-lg navbar-light fixed-top py-5 d-block" data-navbar-on-scroll="data-navbar-on-scroll">
+    <div class="mini-header">
+      <div class="contact-info">
+        Call us at
+          <a href="tel:+918247634546"> <i class="fas fa-phone-alt"></i> +91-8247634546</a>
+          <a href="tel:+919494245846"> <i class="fas fa-phone-alt"></i> +91-9494245846</a>
+          <a href="tel:+919381816842"> <i class="fas fa-phone-alt"></i> +91-9381816842</a>
+          
+      </div>
+  </div>
+    <nav class="navbar navbar-expand-lg navbar-light fixed-top py-5 d-block checktop" data-navbar-on-scroll="data-navbar-on-scroll">
       <div class="container"><a class="navbar-brand" href="index.html">
           <img src="assets/img/logo2.gif" height="60" alt="logo" /> 
         </a>
@@ -66,7 +124,7 @@
       </div>
       <!--/.bg-holder-->
 
-      <div class="container">
+      <div class="container checktop">
         <div class="row align-items-center">
           <div class="col-md-5 col-lg-6 order-0 order-md-1 text-end"><img class="pt-7 pt-md-0 hero-img" src="assets/img/hero/hero.png" alt="hero-header" /></div>
           <div class="col-md-7 col-lg-6 text-md-start text-center py-6">
